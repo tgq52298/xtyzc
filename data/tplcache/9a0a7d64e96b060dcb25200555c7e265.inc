@@ -1,0 +1,1 @@
+<li><em>.0[field:global name=autoindex runphp="yes"]@me=@me+1;[/field:global]</em><a href="view.php?aid=[field:id/]">[field:title/]</a></li>

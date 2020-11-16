@@ -1,0 +1,104 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="author" content="order by www.zheyitianshi.com" />
+<title>{dede:global.cfg_webname/}</title>
+<meta name="description" content="{dede:global.cfg_description/}" />
+<meta name="keywords" content="{dede:global.cfg_keywords/}" />
+<LINK href="/skin/css/master.css" rel=stylesheet>
+<LINK href="/skin/css/jbox.css" rel=stylesheet>
+<link rel="shortcut icon" type="image/x-icon" href="/favicon.png" >
+<script language="JavaScript" type="text/javascript" src="/skin/js/jquery.min.js"></script>
+<script language="JavaScript" type="text/javascript" src="/skin/js/functions.js"></script>
+<script language="JavaScript" type="text/javascript" src="/skin/js/formvalid.js"></script>
+<script language="JavaScript" type="text/javascript" src="/skin/js/jquery.jbox-2.3.min.js"></script>
+<script language="JavaScript" type="text/javascript" src="/skin/js/search.js"></script>
+<script language="JavaScript" type="text/javascript" src="/skin/js/banner.js"></script>
+<script language="JavaScript" type="text/javascript" src="/skin/js/nav.js"></script>
+<meta http-equiv="mobile-agent" content="format=xhtml;url={dede:global.cfg_mobileurl/}/index.php">
+<script type="text/javascript">if(window.location.toString().indexOf('pref=padindex') != -1){}else{if(/AppleWebKit.*Mobile/i.test(navigator.userAgent) || (/MIDP|SymbianOS|NOKIA|SAMSUNG|LG|NEC|TCL|Alcatel|BIRD|DBTEL|Dopod|PHILIPS|HAIER|LENOVO|MOT-|Nokia|SonyEricsson|SIE-|Amoi|ZTE/.test(navigator.userAgent))){if(window.location.href.indexOf("?mobile")<0){try{if(/Android|Windows Phone|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)){window.location.href="{dede:global.cfg_mobileurl/}/index.php";}else if(/iPad/i.test(navigator.userAgent)){}else{}}catch(e){}}}}</script>
+<!--[if IE 6]>
+<script type="text/javascript" src="/skin/js/png.js"></script>
+<script>DD_belatedPNG.fix('div,img,span,li,a,a:hover,dd,p,input,select')</script>
+<![endif]-->
+</head>
+
+<body>
+{dede:include filename="head.htm"/}
+<div class="green_cloud_bg">
+  <div class="green_cloud">
+     <div class="marquee">
+        <p>站内公告：</p>
+        <marquee scrollamount="5" scrolldelay="9" onMouseOut="this.start()" onMouseOver="this.stop()">
+        {dede:global.cfg_ggtxet/}
+        </marquee>
+      </div>
+    <div class="green_right">
+      <div class="search">
+        <form method="post" action="/plus/search.php"  name="formsearch">
+          <input type="hidden" name="kwtype" value="0" />
+          <input type="text" class="text pngFix" name="q" id="q" placeholder="请输入搜索关键词"/>
+          <input type="submit" title="搜索" class="btn pngFix" value=""/>
+        </form>
+        <script src="/skin/js/jqselect.js" type=text/javascript></SCRIPT> 
+      </div>
+    </div>
+  </div>
+</div>
+<!-- <script type="text/javascript">
+	$(function() {
+		$('#q').focus(function() {
+			$('#q').val('');
+		});
+		$('#q').blur(function() {
+			setTimeout(function() {
+				$('#q').val("请输入搜索关键词");
+			}, 3000);
+		})
+	});
+</script> -->
+<!-- 成鱼 -->
+
+<div class="con1"> <p class="p"><span class="iconfontxl">&#xe63f;</span> <span>{dede:field name='typename'/}</span></p>  <br>
+  <ul class="con1_list">
+    {dede:channel type='son' typeid='2' titlelen='80' row='4'}
+    <li> <a href="[field:typelink/]" title="[field:typename/]"> <img src="[field:typeimg/]" width="218" height="228" class="PicAuto" alt="" />
+    <span>[field:typename/] </span> <img src="/skin/img/add.png" class="add" /> </a> </li>
+    {/dede:channel}
+  </ul>
+</div>
+
+<!-- 鱼苗 -->
+<div class="con1"> <p class="p"><span class="iconfontxl">&#xe63f;</span> <span>{dede:field name='typename'/}</span></p>  <br>
+  <ul class="con1_list">
+    
+    {dede:channel   typeid='7 type='son' titlelen='80' row='2'}
+    <li> <a href="[field:typelink/]" title="[field:typename/]"> <img src="[field:typeimg/]" width="218" height="228" class="PicAuto" alt="" />
+    <span>[field:typename/] </span> <img src="/skin/img/add.png" class="add" /> </a> </li>
+    {/dede:channel}
+   
+  </ul>
+</div>
+
+<!-- 关于我们 --> 
+{dede:channelartlist typeid='1,0'}
+<div class="con3_bg1">
+  <div class="con3"> <p class="p"><span class="iconfontl">&#xe615;</span><span>{dede:field name='typename'/}</span></p>  <br>
+    <!--<div class="s_banner">-->
+    <!--  <ul class="s_banner_pic">-->
+    <!--    {dede:arclist orderby ='pubdate' typeid='12' titlelen='80' row='2'}-->
+    <!--    <li><img src="[field:picname/]" /></li>-->
+    <!--    {/dede:arclist}-->
+    <!--  </ul>-->
+    <!--  <div class="s_btns">-->
+    <!--    <div> <a class="prev" href="javascript:void(0)"></a> <a class="next" href="javascript:void(0)"></a> </div>-->
+    <!--  </div>-->
+    <!--</div>-->
+    <div class="con3_font">　{dede:sql sql='Select content from dede_arctype where id=1'}[field:content function='cn_substr(html2text(@me),860)'/] {/dede:sql} ...</div>
+  </div>
+</div>
+{/dede:channelartlist}
+{dede:include filename="footer.htm"/}
+</body>
+</html>

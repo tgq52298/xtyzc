@@ -1,0 +1,66 @@
+.banner {
+    width: 100%;
+    position: relative;
+    transform: translateZ(0);
+    background: #fff;
+}
+
+.banner .slideBox {
+	position: relative;
+	overflow: hidden;
+	margin: 0 auto;
+	max-width: 100%;
+	height: 176px;
+}
+
+@media screen and (max-width:750px) {
+	.banner .slideBox .bd ul li img {
+		height: 176px;
+	}
+
+}
+
+.banner .slideBox .bd ul li img {
+	margin: 0 auto;
+}
+
+.banner .slideBox .hd {
+	position: absolute;
+	height: 28px;
+	line-height: 28px;
+	bottom: 0px;
+	right: 0;
+	z-index: 1;
+	width: 100%;
+	text-align: center;
+}
+
+.banner .slideBox .hd li {
+	display: inline-block;
+	width: 8px;
+	height: 8px;
+	background: none;
+	text-indent: -9999px;
+	overflow: hidden;
+	margin: 0 6px;
+	border-radius: 50%;
+	background: rgba(255, 255, 255, 0.5);
+}
+
+.banner .slideBox .hd li.on {
+	background: rgba(255, 255, 255, 1);
+}
+
+.banner .slideBox .bd {
+	position: relative;
+	z-index: 0;
+}
+
+.banner .slideBox .bd li {
+	position: relative;
+	text-align: center;
+}
+
+.index_clear{
+	margin:0 auto!important;
+}

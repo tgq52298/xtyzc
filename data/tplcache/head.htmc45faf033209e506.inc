@@ -1,0 +1,45 @@
+<?php
+$z[0]=Array("type","[field:typeurl/]",29,80);
+$z[0][4]=array();
+$z[0][4]['typeid']="15";
+$z[1]=Array("global","",303,329);
+$z[1][4]=array();
+$z[1][4]['name']="cfg_webname";
+$z[2]=Array("global","",407,433);
+$z[2][4]=array();
+$z[2][4]['name']="cfg_webname";
+$z[3]=Array("global","",472,498);
+$z[3][4]=array();
+$z[3][4]['name']="cfg_webname";
+$z[4]=Array("global","",572,594);
+$z[4][4]=array();
+$z[4][4]['name']="cfg_tel";
+$z[5]=Array("global","",609,635);
+$z[5][4]=array();
+$z[5][4]['name']="cfg_shijian";
+$z[6]=Array("field","(@me==\"\")? @me=\" class='on' \":@me=\"\";",717,804);
+$z[6][4]=array();
+$z[6][4]['name']="typeid";
+$z[6][4]['runphp']="yes";
+$z[7]=Array("channelartlist","\n    <li><a class=\"{dede:field.currentstyle/}\" href=\"{dede:field name='typeurl'/}\">{dede:field name='typename'/}</a>\n      <dl>\n        {dede:sql sql='Select * from `dede_arctype` where reid=~id~ ORDER BY id'}\n        <dd><a href='[field:typedir function=\"cn_substr(@me,200,9) \" /]'>[field:typename/]</a></dd>\n        {/dede:sql}\n      </dl>\n    </li>\n    ",840,1270);
+$z[7][4]=array();
+$z[7][4]['typeid']="top";
+$z[7][4]['currentstyle']="on";
+$z[8]=Array("field","(@me==\"\")? @me=\" \":@me=\"style='display:none' \";",1305,1402);
+$z[8][4]=array();
+$z[8][4]['name']="typeid";
+$z[8][4]['runphp']="yes";
+$z[9]=Array("arclist","\n    <li> <img src=\"[field:picname/]\"  /> </li>\n    ",1434,1536);
+$z[9][4]=array();
+$z[9][4]['typeid']="11";
+$z[9][4]['row']="2";
+$z[10]=Array("field","(@me==\"\")? @me=\" style='display:none' \":@me=\"\";",1631,1728);
+$z[10][4]=array();
+$z[10][4]['name']="typeid";
+$z[10][4]['runphp']="yes";
+$z[11]=Array("arclist","\n    <li> <img src=\"[field:picname/]\"  /> </li>\n    ",1760,1862);
+$z[11][4]=array();
+$z[11][4]['typeid']="16";
+$z[11][4]['row']="2";
+
+?>

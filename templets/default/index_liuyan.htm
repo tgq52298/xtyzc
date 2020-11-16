@@ -1,0 +1,90 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="author" content="order by www.zheyitianshi.com" />
+<title>{dede:global.cfg_webname/}</title>
+<meta name="keywords" content="{dede:field name='keywords'/}" />
+<meta name="description" content="{dede:global.cfg_description/}" />
+<LINK href="/skin/css/master.css" rel=stylesheet>
+<LINK href="/skin/css/jbox.css" rel=stylesheet>
+<link rel="shortcut icon" type="image/x-icon" href="/favicon.png" >
+<script language="JavaScript" type="text/javascript" src="/skin/js/jquery.min.js"></script>
+<script language="JavaScript" type="text/javascript" src="/skin/js/functions.js"></script>
+<script language="JavaScript" type="text/javascript" src="/skin/js/formvalid.js"></script>
+<script language="JavaScript" type="text/javascript" src="/skin/js/jquery.jbox-2.3.min.js"></script>
+<script language="JavaScript" type="text/javascript" src="/skin/js/search.js"></script>
+<script language="JavaScript" type="text/javascript" src="/skin/js/banner.js"></script>
+<script language="JavaScript" type="text/javascript" src="/skin/js/nav.js"></script>
+<script language="JavaScript" type="text/javascript" src="/skin/js/ajax.js"></script>
+<script type="text/javascript" src="/skin/js/urlredirect.js"></script>
+<!--[if IE 6]>
+<script type="text/javascript" src="/skin/js/png.js"></script>
+<script>DD_belatedPNG.fix('div,img,span,li,a,a:hover,dd,p,input,select')</script>
+<![endif]-->
+</head>
+
+<body>
+{dede:include filename="head.htm"/}
+{dede:include filename="position.htm"/}
+<div class="sub_page">
+  {dede:include filename="left.htm"/}
+  <div class="right_con">
+    <div class="bookmain">
+      <div class="clear"></div>
+      <div class="blank"></div>
+      <div class="bookline"></div>
+      <div class="clear"></div>
+      <div class="message">
+       <form action="/plus/diy.php" enctype="multipart/form-data" method="post"  id="form1" name="form1">
+               <input type="hidden" name="action" value="post" />
+               <input type="hidden" name="diyid" value="1" />
+               <input type="hidden" name="do" value="2" />
+       
+         <ul>
+           <li>
+             <p class="message_title"> <span class="c_red">*</span> 姓名： </p>
+             <p class="message_content">
+               <input type="text" name="name" id="name" placeholder="请输入用户名" onblur="checkusername()"/>
+		   </p>
+		    <span class="errMsg" id="errMsg_nickname"> </span>
+			</li>
+           <li>
+             <p class="message_title"> <span class="c_red">*</span> 手机： </p>
+             <p class="message_content">
+               <input type="tel" name="phone" size="30" id="phone" placeholder="请输入手机号" onblur="checkphone()"/>
+             </p>
+			 <span class="errMsg" id="errMsg_telephone"> </span> 
+             </li>
+           <li>
+             <p class="message_title"> 邮箱地址： </p>
+             <p class="message_content">
+               <input name="email" type="emai" id="email" placeholder="请输入邮箱" onblur="checkemail()" />
+               </p>
+			   <span class="errMsg" id="errMsg_email"> </span>
+           </li>
+           
+           <li class="contentb">
+             <p class="message_title"> 留言内容： </p>
+             <p class="message_content">
+               <textarea name="content" id="content" placeholder="请输入内容" onblur="checkcontent()" ></textarea>
+			   <br> <span class="errMsg" id="errMsg_content"> </span>
+             </p>
+			
+             </li>
+           <li class="yzm">
+             <p class="message_sub"><button type="submit" style="border: none;"><img src="/skin/img/book_sub.jpg" width="104" height="33"></button></p>
+           </li>
+               <input type="hidden" name="dede_fields" value="name,text;phone,text;email,text;content,multitext" />
+               <input type="hidden" name="dede_fieldshash" value="8661f0ce4a82f42d4b2415ebbbeffdfb" />
+         </ul>
+       </form>
+      </div>
+	 <script type="text/javascript" src="/skin/js/YZ.js"></script>
+      <div class="clear"></div>
+    </div>
+  </div>
+</div>
+{dede:include filename="footer.htm"/}
+</body>
+</html>

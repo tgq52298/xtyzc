@@ -1,0 +1,56 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="author" content="order by www.zheyitianshi.com" />
+<title>{dede:field.title/}搜索_{dede:global.cfg_webname/}</title>
+<meta name="keywords" content="{dede:field name='keywords'/}" />
+<meta name="description" content="{dede:field name='description' function='html2text(@me)'/}" />
+<LINK href="/skin/css/master.css" rel=stylesheet>
+<LINK href="/skin/css/jbox.css" rel=stylesheet>
+<script language="JavaScript" type="text/javascript" src="/skin/js/jquery.min.js"></script>
+<script language="JavaScript" type="text/javascript" src="/skin/js/functions.js"></script>
+<script language="JavaScript" type="text/javascript" src="/skin/js/formvalid.js"></script>
+<script language="JavaScript" type="text/javascript" src="/skin/js/jquery.jbox-2.3.min.js"></script>
+<script language="JavaScript" type="text/javascript" src="/skin/js/search.js"></script>
+<script language="JavaScript" type="text/javascript" src="/skin/js/banner.js"></script>
+<script language="JavaScript" type="text/javascript" src="/skin/js/nav.js"></script>
+<script type="text/javascript" src="/skin/js/urlredirect.js"></script>
+<!--[if IE 6]>
+<script type="text/javascript" src="/skin/js/png.js"></script>
+<script>DD_belatedPNG.fix('div,img,span,li,a,a:hover,dd,p,input,select')</script>
+<![endif]-->
+</head>
+
+<body>
+{dede:include filename="head.htm"/}
+<div class="sub_top_bg">
+  <div class="sub_top"> <img src="/skin/img/sub_b.png" class="sub_b" />
+    {dede:channelartlist typeid='2,0'}
+    <div class="left_title"> <span>{dede:field name='typename'/}</span>
+      <p>{dede:field name='typenameen'/}</p>
+    </div>
+    {/dede:channelartlist} 
+    <div class="right_title"> <span class="right_name">搜索 <strong class="fc_03c">{dede:global name='keyword' function='RemoveXSS(@me)'/}</strong> 的结果</span>
+      
+    </div>
+  </div>
+</div>
+<div class="sub_page">
+  {dede:include filename="left.htm"/}
+  <div class="right_con">
+    <ul class="news">
+      {dede:list pagesize ='15'}  
+      <li> <strong>.0[field:global.autoindex/]</strong> <a href="[field:arcurl/]" title="[field:title/]">[field:title/]</a><span>[field:pubdate function="MyDate('Y-m-d',@me)"/]</span></li>
+    {/dede:list}
+    </ul>
+    <div class="pages">
+      <ul>
+        {dede:pagelist listitem="pre,next,pageno" listsize="2"/}
+      </ul>
+    </div>
+  </div>
+</div>
+{dede:include filename="footer.htm"/}
+</body>
+</html>

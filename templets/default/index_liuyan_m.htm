@@ -1,0 +1,105 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="{aite:global.cfg_soft_lang/}">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta content="yes" name="apple-mobile-web-app-capable" />
+		<meta content="telephone=no" name="format-detection" />
+		<meta name="author" content="order by www.zheyitianshi.com" />
+		<title>{dede:field.title/}_{dede:global.cfg_webname/}</title>
+		<link rel="stylesheet" type="text/css" href="/m/skin/css/master.css" />
+		<link rel="stylesheet" type="text/css" href="/m/skin/css/subpage.css" />
+		<link rel="stylesheet" type="text/css" href="/m/skin/css/child_vip.css" />
+		<link rel="shortcut icon" type="image/x-icon" href="/favicon.png">
+		<script type="text/javascript" src="/m/skin/js/jquery.js"></script>
+		<script type="text/javascript" src="/m/skin/js/formvalid.js"></script>
+		<style>
+			.head {
+	background: #64A657
+}
+.foot {
+	background: #18284A
+}
+
+.nav_color {
+	background: #18284A
+}
+textarea{
+	height: 200px!important;
+}
+.login form ul li p span{
+	display: inline-block;
+}
+</style>
+		<script type="text/javascript" src="/m/skin/js/nav.js"></script>
+
+		<script type="text/javascript" src="/m/skin/js/cart_icon.js"></script>
+
+	</head>
+
+	<body>
+		{dede:include filename="nav_m.htm"/}
+		<div class="allpage">
+			<div class="black-fixed commonfont">&#xe607;</div>
+			<div class="header">
+				<div class="head"> <a href="/m" title="首页" class="home-btn commonfont">&#xe608;</a>
+					<p class="top-title">{dede:field.typename/}</p>
+					<div class="nav-btn commonfont">&#xe60b;</div>
+				</div>
+
+			</div>
+			<div class="content">
+				<div class="login">
+					<form action="/plus/diy.php" enctype="multipart/form-data" method="post" id="form1" name="form1">
+						<input type="hidden" name="action" value="post" />
+						<input type="hidden" name="diyid" value="1" />
+						<input type="hidden" name="do" value="2" />
+						<ul>
+							<li>
+								<p>
+									<input class="login_input" type="text" name="name" id="name" placeholder="请输入姓名" onblur="checkusername()" />
+									<span class="errMsg" id="errMsg_nickname"> </span>
+								</p>
+							</li>
+							<li>
+								<p>
+									<input class="login_input" type="tel" name="phone" size="30" id="phone" placeholder="请输入手机号" onblur="checkphone()" />
+									<span class="errMsg" id="errMsg_telephone"> </span>
+								</p>
+							</li>
+
+							<li>
+								<p>
+									<textarea class="login_input" name="content" id="content" placeholder="请输入内容" onblur="checkcontent()"></textarea>
+									<span class="errMsg" id="errMsg_content"> </span>
+								</p>
+							</li>
+							<li>
+								<button class="login_btn common_bg" type="submit" id="submit" value="">提交</button>
+							</li>
+							<input type="hidden" name="dede_fields" value="name,text;phone,text;email,text;content,multitext" />
+							<input type="hidden" name="dede_fieldshash" value="8661f0ce4a82f42d4b2415ebbbeffdfb" />
+						</ul>
+					</form>
+
+				</div>
+			</div>
+			{dede:include filename="footer_m.htm"/}
+		</div>
+		<script type="text/javascript" src="/m/skin/js/zheng.js"></script>
+		<script type="text/javascript">
+			document.getElementById("submit").onclick = function() {
+				disabled()
+			};
+
+			function disabled() {
+				setTimeout(function() {
+					document.getElementById("submit").disabled = true;
+				}, 1000);
+				setTimeout(function() {
+					document.getElementById("submit").disabled = false;
+				}, 3000);
+			}
+		</script>
+	</body>
+</html>

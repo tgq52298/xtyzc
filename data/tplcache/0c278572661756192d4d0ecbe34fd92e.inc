@@ -1,0 +1,1 @@
+<li> <img src="[field:picname/]" width="166" height="166"  class="PicAuto" alt="[field:title/]"/> </li>

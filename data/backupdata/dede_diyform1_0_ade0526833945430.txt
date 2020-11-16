@@ -1,0 +1,7 @@
+INSERT INTO `dede_diyform1` VALUES('73','0','网站内容管','17608202321','123321@qq.com','挂号费多少飞度');
+INSERT INTO `dede_diyform1` VALUES('74','0','信息管理','17608202321','','很反感回复过');
+INSERT INTO `dede_diyform1` VALUES('75','0','广东佛山范','17608202321','','官方的给房费费多少');
+INSERT INTO `dede_diyform1` VALUES('76','0','网站内容管理员','176082023','123321','gdfsgdf');
+INSERT INTO `dede_diyform1` VALUES('77','0','唐光强','17608202321','504244848@qq.com','股份的公告的');
+INSERT INTO `dede_diyform1` VALUES('78','0','','','','');
+INSERT INTO `dede_diyform1` VALUES('79','0','','','','');

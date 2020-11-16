@@ -1,0 +1,47 @@
+<?php
+$z[0]=Array("global","",313,339);
+$z[0][4]=array();
+$z[0][4]['name']="cfg_webname";
+$z[1]=Array("global","",382,412);
+$z[1][4]=array();
+$z[1][4]['name']="cfg_description";
+$z[2]=Array("global","",448,475);
+$z[2][4]=array();
+$z[2][4]['name']="cfg_keywords";
+$z[3]=Array("global","",1340,1368);
+$z[3][4]=array();
+$z[3][4]['name']="cfg_mobileurl";
+$z[4]=Array("global","",1846,1874);
+$z[4][4]=array();
+$z[4][4]['name']="cfg_mobileurl";
+$z[5]=Array("include","",2150,2185);
+$z[5][4]=array();
+$z[5][4]['filename']="head.htm";
+$z[6]=Array("global","",2412,2437);
+$z[6][4]=array();
+$z[6][4]['name']="cfg_ggtxet";
+$z[7]=Array("field","",3313,3342);
+$z[7][4]=array();
+$z[7][4]['name']="typename";
+$z[8]=Array("channel","\n    <li> <a href=\"[field:typelink/]\" title=\"[field:typename/]\"> <img src=\"[field:typeimg/]\" width=\"218\" height=\"228\" class=\"PicAuto\" alt=\"\" />\n    <span>[field:typename/] </span> <img src=\"/skin/img/add.png\" class=\"add\" /> </a> </li>\n    ",3389,3701);
+$z[8][4]=array();
+$z[8][4]['type']="son";
+$z[8][4]['typeid']="2";
+$z[8][4]['titlelen']="80";
+$z[8][4]['row']="4";
+$z[9]=Array("field","",3813,3842);
+$z[9][4]=array();
+$z[9][4]['name']="typename";
+$z[10]=Array("channel","\n    <li> <a href=\"[field:typelink/]\" title=\"[field:typename/]\"> <img src=\"[field:typeimg/]\" width=\"218\" height=\"228\" class=\"PicAuto\" alt=\"\" />\n    <span>[field:typename/] </span> <img src=\"/skin/img/add.png\" class=\"add\" /> </a> </li>\n    ",3894,4207);
+$z[10][4]=array();
+$z[10][4]['typeid']="7 type=";
+$z[10][4]['son titlelen']="80";
+$z[10][4]['row']="2";
+$z[11]=Array("channelartlist","\n<div class=\"con3_bg1\">\n  <div class=\"con3\"> <p class=\"p\"><span class=\"iconfontl\">&#xe615;</span><span>{dede:field name='typename'/}</span></p>  <br>\n    <!--<div class=\"s_banner\">-->\n    <!--  <ul class=\"s_banner_pic\">-->\n    <!--    {dede:arclist orderby ='pubdate' typeid='12' titlelen='80' row='2'}-->\n    <!--    <li><img src=\"[field:picname/]\" /></li>-->\n    <!--    {/dede:arclist}-->\n    <!--  </ul>-->\n    <!--  <div class=\"s_btns\">-->\n    <!--    <div> <a class=\"prev\" href=\"javascript:void(0)\"></a> <a class=\"next\" href=\"javascript:void(0)\"></a> </div>-->\n    <!--  </div>-->\n    <!--</div>-->\n    <div class=\"con3_font\">　{dede:sql sql='Select content from dede_arctype where id=1'}[field:content function='cn_substr(html2text(@me),860)'/] {/dede:sql} ...</div>\n  </div>\n</div>\n",4251,5098);
+$z[11][4]=array();
+$z[11][4]['typeid']="1,0";
+$z[12]=Array("include","",5099,5136);
+$z[12][4]=array();
+$z[12][4]['filename']="footer.htm";
+
+?>

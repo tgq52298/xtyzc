@@ -1,0 +1,2 @@
+INSERT INTO `dede_admin` VALUES('1','10','admin','866e4b3b749eb8a3bb4f','admin','www.zheyitianshi.com','admin@www.zheyitianshi.com','','1594262700','139.205.239.205');
+INSERT INTO `dede_admin` VALUES('2','10','yxycf','866e4b3b749eb8a3bb4f','tgq','','','','1590924802','119.7.59.143');

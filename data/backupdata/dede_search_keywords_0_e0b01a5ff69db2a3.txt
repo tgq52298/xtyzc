@@ -1,0 +1,7 @@
+INSERT INTO `dede_search_keywords` VALUES('1','名称','名称','2','6','1495696420','0','0');
+INSERT INTO `dede_search_keywords` VALUES('2','阿斯蒂芬','阿斯蒂芬 斯蒂芬','1','0','1496285519','0','0');
+INSERT INTO `dede_search_keywords` VALUES('3','沙发','沙发','1','0','1496285531','0','0');
+INSERT INTO `dede_search_keywords` VALUES('4','请输入搜索关键词','请输入搜索关键词 关键词 搜索 输入','8','0','1590907849','0','0');
+INSERT INTO `dede_search_keywords` VALUES('5','鲫鱼','鲫鱼','1','2','1590907932','0','0');
+INSERT INTO `dede_search_keywords` VALUES('6','草鱼','草鱼','1','1','1590978344','0','0');
+INSERT INTO `dede_search_keywords` VALUES('7','121','121','1','0','1590978355','0','0');

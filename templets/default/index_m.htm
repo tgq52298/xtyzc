@@ -1,0 +1,190 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+<meta content="yes" name="apple-mobile-web-app-capable" />
+<meta content="telephone=no" name="format-detection" />
+<meta name="author" content="order by www.zheyitianshi.com" />
+<title>{dede:global.cfg_webname/}</title>
+<meta name="description" content="{dede:global.cfg_description/}" />
+<meta name="keywords" content="{dede:global.cfg_keywords/}" />
+<link rel="stylesheet" type="text/css" href="/m/skin/css/lunbo.css" />
+<link rel="stylesheet" type="text/css" href="/m/skin/css/master.css" />
+<link rel="stylesheet" type="text/css" href="/m/skin/css/subpage.css" />
+<link rel="stylesheet" type="text/css" href="/m/skin/css/child_vip.css" />
+<link rel="shortcut icon" type="image/x-icon" href="/favicon.png" >
+<script type="text/javascript" src="/m/skin/js/jquery.js"></script>
+<style>
+.head {
+	background: #64A657
+}
+.foot {
+	background: #64A657
+}
+
+.nav_color {
+	background: #18284A
+}
+</style>
+<link rel="stylesheet" type="text/css" href="/m/skin/css/swiper.css" />
+<script type="text/javascript" src="/m/skin/js/nav.js"></script>
+<script type="text/javascript" src="/m/skin/js/cart_icon.js"></script>
+<script type="text/javascript" src="/m/skin/js/swiper.js"></script>
+<script type="text/javascript" src="/m/skin/js/touchslide.js"></script>
+<script type="text/javascript" src="/m/skin/js/lihe.js"></script>
+</head>
+
+<body>
+{dede:include filename="nav_m.htm"/}
+<div class="allpage">
+  <div class="black-fixed iconfont">&#xe60f;</div>
+  <div class="header">
+    <div class="head clear-fix">
+      <div class="search_hl search_s">&#xe63c;</div>
+      <a href="/m" title="{dede:global.cfg_webname/}" class="logo"> <span class="title_m">{dede:global.cfg_webname/}</span> </a> 
+      <div class="nav-btn iconfont">&#xe605;</div>
+      <div class="search" style="display: block;">
+        <form class="am-topbar-form am-topbar-left am-form-inline am-topbar-right" role="search" action="{dede:global.cfg_cmsurl/}/plus/search.php">
+		<input type="hidden" name="mobile" value="1" />
+		<input type="hidden" name="kwtype" value="0" />
+          <a class="xbtn iconfont" href="javascript:;">&#xe609;</a>
+          <input type="text" name="q" placeholder="请输入搜索关键词！" class="search-input">
+          <input type="submit" class="search-btn search_s" value="&#xe63c;">
+        </form>
+      </div>
+    </div>
+  </div>
+
+
+  
+  <!-- 轮播图 -->
+  <div class="banner">
+  		<div id="slideBox" class="slideBox">
+  			<div class="bd">
+  				<ul>
+  					 {dede:arclist typeid='17' row='5'}
+  					<li> <img src="[field:picname/]" /> </li>
+  				{/dede:arclist}  
+  				</ul>
+  			</div>
+  			<div class="hd">
+  				<ul>
+  				</ul>
+  			</div>
+  		</div>
+  		<script type="text/javascript">
+  			TouchSlide({
+  				slideCell: "#slideBox",
+  				titCell: ".hd ul", //开启自动分页 autoPage:true ，此时设置 titCell 为导航元素包裹层
+  				mainCell: ".bd ul",
+  				effect: "leftLoop",
+  				autoPage: true, //自动分页
+  				autoPlay: true //自动播放
+  			});
+  		</script>
+  	</div> 
+  
+  
+  <div class="content index_clear">
+    <div class="nav_new1">
+      <ul class="clear-fix">
+      {dede:channel type='top' row='8'}
+       <li><a href="list.php?tid=[field:id/]" class="son">[field:typename/]</a></li>
+      {/dede:channel} 
+      </ul>
+    </div>
+    <!--成鱼展览-->
+    {dede:channelartlist typeid='2,0'}
+    <div class="common_title clear-fix">
+      <div class="com_h2">
+        <h2><span class="iconfont">&#xe63f;</span>&nbsp;成/鱼/展/览&nbsp;<span class="iconfont">&#xe63f;</span></h2>
+        <span class="line_I"></span> </div>
+      <div class="tit_ul">
+        <div class="add_ul">
+          <ul>
+           {dede:channel type='son' typeid='2' titlelen='80' row='4'}
+           <li><a href="list.php?tid=[field:id/]" class="son">[field:typename/]</a></li>
+          {/dede:channel}             
+          </ul>
+        </div>
+      </div>
+      <p><a href="list.php?tid={dede:field name='id'/}" class="more">更多</a></p>
+    </div>
+    <ul class="icon_nav clear-fix">
+    {dede:channel type='son' typeid='2' titlelen='80' row='4'}
+      <li> <a href="list.php?tid=[field:id/]"><img src="[field:typeimg/]" alt="[field:title/]"><span>[field:typename/]</span></a> </li>
+    {/dede:channel}  
+    </ul>
+  {/dede:channelartlist}
+
+    
+    <!--鱼苗展览-->
+    
+    {dede:channelartlist typeid='7,0'}
+    <div class="common_title clear-fix">
+      <div class="com_h2">
+      <h2><span class="search_s">&#xe60f;</span>&nbsp;鱼/苗/展/览&nbsp;<span class="search_s">&#xe60f;</span></h2>
+        <span class="line_I"></span> </div>
+      <div class="tit_ul">
+        <div class="add_ul">
+          <ul>
+           {dede:channel type='son' typeid='7' titlelen='80' row='4'}
+           <li><a href="list.php?tid=[field:id/]" class="son">[field:typename/]</a></li>
+          {/dede:channel}             
+          </ul>
+        </div>
+      </div>
+      <p><a href="list.php?tid={dede:field name='id'/}" class="more">更多</a></p>
+    </div>
+    <ul class="icon_nav clear-fix">
+    {dede:channel type='son' typeid='7' titlelen='80' row='4'}
+      <li> <a href="list.php?tid=[field:id/]"><img src="[field:typeimg/]" alt="[field:title/]"><span>[field:typename/]</span></a> </li>
+    {/dede:channel}  
+    </ul>
+  {/dede:channelartlist}
+    
+    <!--养殖技术-->
+    {dede:channelartlist typeid='13,0'}
+    <div class="com_tit">
+      <h3 class="h3">{dede:field name='typename'/}</h3>
+      <a href="list.php?tid={dede:field name='id'/}" title="更多">更多</a> <span class="line_I"></span> </div>
+    <div class="new_c">
+      <ul>
+       {dede:arclist limit='0,1' orderby='id'}
+        <li><em>.0[field:global.autoindex/]</em> <a href="view.php?aid=[field:id/]">[field:title/]</a>
+<!--          <p>[field:description function="cn_substr(@me,100)"/]...</p>
+ -->        </li>
+       {/dede:arclist}  
+       {dede:arclist limit='1,2' orderby='id'}
+        <li><em>.0[field:global name=autoindex runphp="yes"]@me=@me+1;[/field:global]</em><a href="view.php?aid=[field:id/]">[field:title/]</a></li>
+       {/dede:arclist}   
+      </ul>
+    </div>
+    {/dede:channelartlist}
+    <!--电话-->
+
+    
+    <!--公司简介-->
+    {dede:channelartlist typeid='1,0'}
+    <div class="about_i">
+      <div class="com_tit">
+        <h3 class="h3">{dede:field name='typename'/}</h3>
+        <a href="list.php?tid={dede:field name='id'/}" title="更多">更多</a> <span class="line_I"></span> </div>
+      <div class="about_i_c clear-fix"> <a href="list.php?tid={dede:field name='id'/}" title="公司简介">{dede:sql sql='Select content from dede_arctype where id=1'}[field:content function='cn_substr(html2text(@me),260)'/] {/dede:sql} ...</a> </div>
+    </div>
+    {/dede:channelartlist}
+    	<div class="beian"> 版权所有：{dede:global.cfg_powerby/} <br> ICP备案编号：<a href="http://www.beian.miit.gov.cn/" title="{dede:global.cfg_beian/}" target="_blank"> {dede:global.cfg_beian/}</a> </div>
+    </div>
+  {dede:include filename="footer_m.htm"/}
+</div>
+<script type="text/javascript">
+	$(function () { 
+		$(".back_top").click(function(){ 
+		$('body,html').animate({scrollTop:0},1000); 
+		return false; 
+		}); 
+	}); 
+</script>
+</body>
+</html>

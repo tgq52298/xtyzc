@@ -1,0 +1,1 @@
+<li> <a href="[field:arcurl/]" title="[field:title/]"> <img src="[field:picname/]" width="210" height="157" alt="[field:title/]" /> <span>[field:title/]</span> </a> </li>

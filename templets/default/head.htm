@@ -1,0 +1,47 @@
+<div class="fixed"> <a href="{dede:type typeid='15'}[field:typeurl/]{/dede:type}" title="留言反馈" class="book"></a> <a href="javascript:;" title="二维码" class="codepic"></a> <a href="javascript:;" title="返回顶部" class="backup"></a>
+  <div> <img src="/skin/img/code.bmp" class="code" alt="{dede:global.cfg_webname/}" /> </div>
+</div>
+<div class="topbg">
+  <div class="top"> <a href="/" title="{dede:global.cfg_webname/}" class="logo"> <span class="title_pc">{dede:global.cfg_webname/}</span></a>
+    <div class="top_tel"> <span>咨询热线</span>
+      <h2>{dede:global.cfg_tel/}</h2>
+      <p>{dede:global.cfg_shijian/}</p>
+    </div>
+  </div>
+</div>
+<div class="navbg">
+  <ul class="nav">
+    <li><a {dede:field name=typeid runphp="yes"}(@me=="")? @me=" class='on' ":@me="";{/dede:field} href="/">网站首页</a></li>
+    {dede:channelartlist typeid='top' currentstyle='on'}
+    <li><a class="{dede:field.currentstyle/}" href="{dede:field name='typeurl'/}">{dede:field name='typename'/}</a>
+      <dl>
+        {dede:sql sql='Select * from `dede_arctype` where reid=~id~ ORDER BY id'}
+        <dd><a href='[field:typedir function="cn_substr(@me,200,9) " /]'>[field:typename/]</a></dd>
+        {/dede:sql}
+      </dl>
+    </li>
+    {/dede:channelartlist}
+  </ul>
+</div>
+<div class="banner"{dede:field name=typeid runphp="yes"}(@me=="")? @me=" ":@me="style='display:none' ";{/dede:field}>
+  <ul class="banner_pic">
+    {dede:arclist typeid='11' row='2' }
+    <li> <img src="[field:picname/]"  /> </li>
+    {/dede:arclist}
+  </ul>
+  <div class="num">
+    <ul>
+    </ul>
+  </div>
+</div>
+<div class="banner sub_banner" {dede:field name=typeid runphp="yes"}(@me=="")? @me=" style='display:none' ":@me="";{/dede:field}>
+  <ul class="banner_pic">
+    {dede:arclist typeid='16' row='2' }
+    <li> <img src="[field:picname/]"  /> </li>
+    {/dede:arclist}
+  </ul>
+  <div class="num">
+    <ul>
+    </ul>
+  </div>
+</div>
